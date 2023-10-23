@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: #f7f7f7;
+}
+
+#nav {
+  height: 20vh;
+  width: 100%;
+  padding: 25px;
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#nav #nav-part1 {
+  height: 82px;
+  /* background: red; */
+  overflow: hidden;
+}
+#nav #nav-part1 svg {
+  display: block;
+}
+
+#nav #nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7vw;
+}
+#nav-part2 a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #444343;
+  font-weight: 400;
+}
+
+#nav-part2 #links {
+  display: flex;
+  gap: 5vw;
+}
+#nav-part2 #icons {
+  display: flex;
+  gap: 3vw;
+  font-size: 14px;
+  margin-right: 50px;
+  font-weight: 100;
+}
+
+#icons {
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 50px;
+}
+
+#cursor {
+  height: 150px;
+  width: 150px;
+  background: blanchedalmond;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.page1 {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 20vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-bottom: vw;
+}
+
+.page1 h1 {
+  font-size: 15.7vw;
+  line-height: 12vw;
+  font-weight: bold;
+  letter-spacing: -9px;
+  margin-bottom: 2vw;
+}
+
+*::selection {
+  background: #000;
+  color: #fff;
+}
+
+#video1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+#video1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#video1 #play {
+  padding: 2.5vw 2vw;
+  background: black;
+  color: #fff;
+  font-weight: 900;
+  position: fixed;
+  font-size: 1.2vw;
+  border-radius: 100%;
+
+  opacity: 0;
+  scale: 0;
+}
+.page2 {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7vw 2vw;
+}
+
+.page2 .elem {
+  height: 100%;
+  width: 31%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  /* background-color: #d3d3d3b6; */
+}
+.page2 .elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page2 .elem .dets {
+  height: 50px;
+  width: 80%;
+  position: absolute;
+  z-index: 9;
+  border-radius: 50px;
+  background: palegoldenrod;
+}
+
+.page3 {
+  min-height: 150vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 10vw;
+}
+.child {
+  height: 73vh;
+  width: 38vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #000; */
+}
+
+.child img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page4 {
+  height: 50vh;
+  width: 100%;
+  background: #000;
+}
+
+@media (max-width: 600px) {
+  .page1 h1 {
+    font-size: 15.5vw;
+    line-height: 12vw;
+    letter-spacing: -2px;
+  }
+  .page1 {
+    min-height: 75vw;
+  }
+
+  .page1 .Head1 {
+    padding-top: 25vw;
+  }
+
+  #video1 {
+    height: 30vh;
+    width: 100%;
+    padding: 2vw 0.5vw;
+    position: relative;
+  }
+  #video1 #play {
+    padding: 4vw 3vw;
+    position: fixed;
+    font-size: 2vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    scale: 1;
+  }
+  .page2 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15vw 2vw;
+  }
+  .page2 .elem {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5vw;
+    background: #000;
+
+    /* background-color: #d3d3d355; */
+  }
+
+  #nav-part2 #links {
+    display: none;
+  }
+  #nav-part2 #icons {
+    padding: 2vh;
+    margin: 0 2vw;
+  }
+  .page3 {
+    min-height: 150vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 10vw;
+  }
+  .child {
+    height: 54vh;
+    width: 88vw;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #000; */
+  }
+
+  .child img {
+    height: 100%;
+  }
+
+  .page4 {
+    height: 50vh;
+    width: 100%;
+    background: #000;
+  }
+}
